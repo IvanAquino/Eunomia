@@ -239,10 +239,16 @@ return [
             'icon'        => 'far fa-home',
         ],
         [
+            'text'        => 'clients',
+            'route'       => 'clients.home',
+            'icon'        => 'far fa-users',
+            'can'         => 'clients-read',
+        ],
+        [
             'text'        => 'users',
             'route'       => 'users.home',
             'icon'        => 'far fa-users',
-            'can' => 'users-read',
+            'can'         => 'users-read',
         ],
         ['header' => 'account_settings'],
         [

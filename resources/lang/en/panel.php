@@ -1,6 +1,17 @@
 <?php
 
 return [
+    'clients' => [
+        'ask_delete_client' => 'Are you sure you want to delete the client?',
+        'client' => 'Client',
+        'client_deleted_success' => 'Client deleted successfully',
+        'client_saved' => 'Client saved successfully',
+        'clients' => 'Clients',
+        'create_client' => 'Create client',
+        'delete_client' => 'Delete client',
+        'edit_client' => 'Edit client',
+        'save_client' => 'Save client',
+    ],
     'general' => [
         'email' => 'Email',
         'home' => 'Home',
@@ -8,6 +19,7 @@ return [
         'last_name' => 'Last name',
         'name' => 'Name',
         'password' => 'Password',
+        'phone_number' => 'Phone number',
     ],
     'users' => [
         'ask_delete_user' => 'Are you sure you want to delete the user?',

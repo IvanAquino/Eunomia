@@ -154,7 +154,10 @@ return [
 
     'attributes' => [
         'role' => 'Role',
-        
+
+        'client.name' => 'Name',
+        'client.email' => 'Email',
+
         'user.name' => 'Name',
         'user.last_name' => 'Last name',
         'user.email' => 'Email',

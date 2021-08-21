@@ -15,12 +15,14 @@ return [
         'superadministrator' => [
             'users' => 'c,r,u,d',
             'profile' => 'r,u',
+            'clients' => 'c,r,u,d',
             'sprint' => 'c,r,u,d',
             'tickets' => 'c,r,u,d',
         ],
         'administrator' => [
             'users' => 'c,r,u,d',
             'profile' => 'r,u',
+            'clients' => 'c,r,u,d',
             'sprint' => 'c,r,u,d',
             'tickets' => 'c,r,u,d',
         ],

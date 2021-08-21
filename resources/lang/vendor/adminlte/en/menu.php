@@ -6,6 +6,7 @@ return [
     'blog'                          => 'Blog',
     'pages'                         => 'Pages',
     'home'                          => 'Home',
+    'clients'                       => 'Clients',
     'users'                         => 'Users',
     'account_settings'              => 'ACCOUNT SETTINGS',
     'profile'                       => 'Profile',

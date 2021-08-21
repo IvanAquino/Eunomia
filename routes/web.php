@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Panel\ClientsController;
 use App\Http\Controllers\Panel\UsersController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,13 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware('auth')->prefix('admin')->group(function () {
+
+    /*
+     * Clients
+     */
+    Route::get('/clients', [ClientsController::class, 'home'])->name('clients.home');
+    Route::get('/clients/create', [ClientsController::class, 'create'])->name('clients.create');
+    Route::get('/clients/edit/{client}', [ClientsController::class, 'edit'])->name('clients.edit');
 
     /*
      * Users
