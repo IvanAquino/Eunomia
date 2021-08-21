@@ -152,6 +152,13 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'role' => 'Role',
+        
+        'user.name' => 'Name',
+        'user.last_name' => 'Last name',
+        'user.email' => 'Email',
+        'user.password' => 'Password',
+    ],
 
 ];

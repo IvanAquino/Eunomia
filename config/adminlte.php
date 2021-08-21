@@ -232,17 +232,17 @@ return [
         ],
 
         // Sidebar items:
+        ['header' => 'main_navigation'],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'sprint-create',
+            'text'        => 'home',
+            'route'       => 'home',
+            'icon'        => 'far fa-home',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'home',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'text'        => 'users',
+            'route'       => 'users.home',
+            'icon'        => 'far fa-users',
+            'can' => 'users-read',
         ],
         ['header' => 'account_settings'],
         [

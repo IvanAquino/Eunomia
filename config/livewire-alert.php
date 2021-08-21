@@ -6,7 +6,7 @@
  */
 return [
     'alert' => [
-        'position' => 'top-end',
+        'position' => 'top',
         'timer' => 3000,
         'toast' => true,
         'text' => null,

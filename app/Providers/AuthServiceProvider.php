@@ -25,6 +25,8 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Gate::define('users-read', function ($user) {
+            return $user->isAbleTo('users-read');
+        });
     }
 }
