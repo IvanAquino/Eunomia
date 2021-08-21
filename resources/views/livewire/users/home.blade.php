@@ -26,6 +26,12 @@
                             :routeParams="['user' => $user->id]"
                             label="panel.users.edit_user"
                         />
+                        <x-adminlte-button
+                            label="{{ __('panel.users.delete_user') }}"
+                            class="btn-sm"
+                            theme="danger"
+                            wire:click="askIfWantToDeleteUser({{ $user->id }})"
+                        />
                     </td>
                 </tr>
                 @endforeach
