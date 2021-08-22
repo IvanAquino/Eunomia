@@ -1,35 +1,33 @@
 <div>
-    
+
     <div class="table-responsive">
         <table class="table table-borderless table-striped">
             <thead>
                 <tr>
                     <th>{{ __('panel.general.id') }}</th>
+                    <th>{{ __('panel.general.code') }}</th>
                     <th>{{ __('panel.general.name') }}</th>
-                    <th>{{ __('panel.general.email') }}</th>
-                    <th>{{ __('panel.general.phone_number') }}</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($clients as $client)
+                @foreach ($projects as $project)
                 <tr>
-                    <td scope="row">{{ $client->id }}</td>
-                    <td>{{ $client->name }}</td>
-                    <td>{{ $client->email }}</td>
-                    <td>{{ $client->phone_number }}</td>
+                    <td scope="row">{{ $project->id }}</td>
+                    <td>{{ $project->code }}</td>
+                    <td>{{ $project->name }}</td>
                     <td class="text-right">
                         <x-secondary-button-link
-                            route="clients.edit"
-                            :routeParams="['client' => $client->id]"
-                            label="panel.clients.edit_client"
+                            route="projects.edit"
+                            :routeParams="['project' => $project->id]"
+                            label="panel.projects.edit_project"
                         />
 
                         <x-adminlte-button
-                            label="{{ __('panel.clients.delete_client') }}"
+                            label="{{ __('panel.projects.delete_project') }}"
                             class="btn-sm"
                             theme="danger"
-                            wire:click="askIfWantToDeleteClient({{ $client->id }})"
+                            wire:click="askIfWantToDeleteProject({{ $project->id }})"
                         />
                     </td>
                 </tr>
@@ -38,6 +36,6 @@
         </table>
     </div>
 
-    {!! $clients->links() !!}
+    {!! $projects->links() !!}
 
 </div>

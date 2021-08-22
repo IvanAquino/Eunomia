@@ -27,7 +27,7 @@
 
     <x-livewire-select
         label="panel.roles.role"
-        identifier="organizador"
+        identifier="role"
         model="role"
     >
         <option value="">-- {{ __('panel.roles.select_role') }} --</option>

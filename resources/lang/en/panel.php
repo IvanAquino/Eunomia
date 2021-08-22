@@ -3,6 +3,7 @@
 return [
     'clients' => [
         'ask_delete_client' => 'Are you sure you want to delete the client?',
+        'cant_find_client' => 'Can\'t find client?',
         'client' => 'Client',
         'client_deleted_success' => 'Client deleted successfully',
         'client_saved' => 'Client saved successfully',
@@ -11,8 +12,12 @@ return [
         'delete_client' => 'Delete client',
         'edit_client' => 'Edit client',
         'save_client' => 'Save client',
+        'select_client' => 'Select a client',
     ],
     'general' => [
+        'code' => 'Code',
+        'create_one' => 'Create one',
+        'details' => 'Details',
         'email' => 'Email',
         'home' => 'Home',
         'id' => 'ID',
@@ -20,6 +25,17 @@ return [
         'name' => 'Name',
         'password' => 'Password',
         'phone_number' => 'Phone number',
+    ],
+    'projects' => [
+        'ask_delete_project' => 'Are you sure you want to delete the project?',
+        'create_project' => 'Create project',
+        'delete_project' => 'Delete project',
+        'edit_project' => 'Edit project',
+        'save_project' => 'Save project',
+        'project' => 'Project',
+        'project_deleted_success' => 'Project deleted successfully',
+        'project_saved' => 'Project saved successfully',
+        'projects' => 'Projects',
     ],
     'users' => [
         'ask_delete_user' => 'Are you sure you want to delete the user?',

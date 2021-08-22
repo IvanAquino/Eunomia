@@ -155,13 +155,17 @@ return [
     'attributes' => [
         'role' => 'Role',
 
-        'client.name' => 'Name',
+        'client.name'  => 'Name',
         'client.email' => 'Email',
 
-        'user.name' => 'Name',
+        'project.name'      => 'Name',
+        'project.code'      => 'Code',
+        'project.client_id' => 'Client',
+
+        'user.name'      => 'Name',
         'user.last_name' => 'Last name',
-        'user.email' => 'Email',
-        'user.password' => 'Password',
+        'user.email'     => 'Email',
+        'user.password'  => 'Password',
     ],
 
 ];

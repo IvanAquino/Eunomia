@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Client;
+use App\Models\Project;
 use App\Models\User;
 use Diglactic\Breadcrumbs\Breadcrumbs;
 use Diglactic\Breadcrumbs\Generator as BreadcrumbTrail;
@@ -25,6 +26,23 @@ Breadcrumbs::for('clients.edit', function (BreadcrumbTrail $trail, Client $clien
     $trail->parent('clients.home');
     $trail->push(__('panel.clients.edit_client'), route('clients.edit', ['client' => $client->id]));
 });
+
+/*
+ * Projects
+ */
+Breadcrumbs::for('projects.home', function (BreadcrumbTrail $trail) {
+    $trail->parent('home');
+    $trail->push(__('panel.projects.projects'), route('projects.home'));
+});
+Breadcrumbs::for('projects.create', function (BreadcrumbTrail $trail) {
+    $trail->parent('projects.home');
+    $trail->push(__('panel.projects.create_project'), route('projects.create'));
+});
+Breadcrumbs::for('projects.edit', function (BreadcrumbTrail $trail, Project $project) {
+    $trail->parent('projects.home');
+    $trail->push(__('panel.projects.edit_project'), route('projects.edit', ['project' => $project->id]));
+});
+
 
 /*
  * Users

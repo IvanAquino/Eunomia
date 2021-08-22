@@ -31,5 +31,8 @@ class AuthServiceProvider extends ServiceProvider
         Gate::define('clients-read', function ($user) {
             return $user->isAbleTo('clients-read');
         });
+        Gate::define('projects-read', function ($user) {
+            return $user->isAbleTo('projects-read');
+        });
     }
 }

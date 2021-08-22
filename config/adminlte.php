@@ -66,7 +66,7 @@ return [
 
     'usermenu_enabled' => true,
     'usermenu_header' => false,
-    'usermenu_header_class' => 'bg-primary',
+    'usermenu_header_class' => 'bg-purple',
     'usermenu_image' => false,
     'usermenu_desc' => false,
     'usermenu_profile_url' => false,
@@ -236,18 +236,24 @@ return [
         [
             'text'        => 'home',
             'route'       => 'home',
-            'icon'        => 'far fa-home',
+            'icon'        => 'fa fa-home',
         ],
         [
             'text'        => 'clients',
             'route'       => 'clients.home',
-            'icon'        => 'far fa-users',
+            'icon'        => 'fa fa-users',
             'can'         => 'clients-read',
+        ],
+        [
+            'text'        => 'projects',
+            'route'       => 'projects.home',
+            'icon'        => 'fa fa-list-alt',
+            'can'         => 'projects-read',
         ],
         [
             'text'        => 'users',
             'route'       => 'users.home',
-            'icon'        => 'far fa-users',
+            'icon'        => 'fa fa-users',
             'can'         => 'users-read',
         ],
         ['header' => 'account_settings'],
