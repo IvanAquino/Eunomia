@@ -48,7 +48,11 @@ class Form extends Component
         $this->validate();
 
         if (!$this->model) {
-            Project::create($this->project);
+            $project = Project::create($this->project);
+            $project->sprints()->create([
+                'name' => __('panel.general.backlog'),
+                'is_backlog' => true,
+            ]);
         } else {
             $this->model->update($this->project);
         }

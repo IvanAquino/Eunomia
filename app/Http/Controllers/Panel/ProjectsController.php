@@ -30,6 +30,16 @@ class ProjectsController extends Controller
     }
 
     /**
+     * Show the projects detail page
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function details(Project $project)
+    {
+        return view('panel.projects.details', compact('project'));
+    }
+
+    /**
      * Show the projects edit page
      *
      * @return \Illuminate\Contracts\Support\Renderable

@@ -18,6 +18,12 @@
                     <td>{{ $project->name }}</td>
                     <td class="text-right">
                         <x-secondary-button-link
+                            route="projects.details"
+                            :routeParams="['project' => $project->id]"
+                            label="panel.general.details"
+                        />
+
+                        <x-secondary-button-link
                             route="projects.edit"
                             :routeParams="['project' => $project->id]"
                             label="panel.projects.edit_project"

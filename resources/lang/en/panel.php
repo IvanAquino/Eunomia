@@ -15,6 +15,7 @@ return [
         'select_client' => 'Select a client',
     ],
     'general' => [
+        'backlog' => 'Backlog',
         'code' => 'Code',
         'create_one' => 'Create one',
         'details' => 'Details',
@@ -51,5 +52,12 @@ return [
         'role' => 'Role',
         'roles' => 'Roles',
         'select_role' => 'Select a role',
+    ],
+    'sprints' => [
+        'create_sprint' => 'Create sprint',
+        'sprint_x_number' => 'Sprint :number',
+    ],
+    'tickets' => [
+        'placeholder' => 'What needs to be done?',
     ],
 ];

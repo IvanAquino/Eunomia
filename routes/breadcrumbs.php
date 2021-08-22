@@ -42,6 +42,10 @@ Breadcrumbs::for('projects.edit', function (BreadcrumbTrail $trail, Project $pro
     $trail->parent('projects.home');
     $trail->push(__('panel.projects.edit_project'), route('projects.edit', ['project' => $project->id]));
 });
+Breadcrumbs::for('projects.details', function (BreadcrumbTrail $trail, Project $project) {
+    $trail->parent('projects.home');
+    $trail->push(__('panel.general.details'), route('projects.details', ['project' => $project->id]));
+});
 
 
 /*

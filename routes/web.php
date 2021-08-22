@@ -39,6 +39,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::get('/projects', [ProjectsController::class, 'home'])->name('projects.home');
     Route::get('/projects/create', [ProjectsController::class, 'create'])->name('projects.create');
     Route::get('/projects/edit/{project}', [ProjectsController::class, 'edit'])->name('projects.edit');
+    Route::get('/projects/details/{project}', [ProjectsController::class, 'details'])->name('projects.details');
 
     /*
      * Users
