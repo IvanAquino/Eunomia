@@ -17,12 +17,14 @@ class Sprint extends Component
 
     public function showInputIssue()
     {
+        $this->dispatchBrowserEvent("show_input_issue_{$this->sprint->id}");
         $this->show_input_issue = true;
     }
 
     public function hideInputIssue()
     {
         $this->show_input_issue = false;
+        $this->reset('new_issue');
     }
 
     public function createIssue($name) {
@@ -35,7 +37,6 @@ class Sprint extends Component
         ]);
 
         $this->hideInputIssue();
-        $this->reset('new_issue');
     }
 
     public function render()

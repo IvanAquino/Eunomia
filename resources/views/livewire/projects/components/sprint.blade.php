@@ -13,13 +13,13 @@
 
     @if ($show_input_issue)
         <x-adminlte-input
+            id="issue_name_{{ $sprint->id }}"
             name="issue_name"
             class="form-control-sm"
             placeholder="{{ __('panel.issues.placeholder') }}"
             wire:model="new_issue"
             wire:keydown.enter="createIssue($event.target.value)"
             wire:keydown.escape="hideInputIssue"
-            autofocus
         />
     @else
         <x-adminlte-button
@@ -30,3 +30,11 @@
         />
     @endif
 </div>
+
+@push('js')
+<script>
+    window.addEventListener('show_input_issue_{{ $sprint->id }}', function () {
+        document.querySelector('#issue_name_{{ $sprint->id }}').focus();
+    })
+</script>
+@endpush
