@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'Vlad',
+    'title' => 'Eunomia',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>V</b>lad',
+    'logo' => '<b>E</b>unomia',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle',
     'logo_img_xl' => null,
