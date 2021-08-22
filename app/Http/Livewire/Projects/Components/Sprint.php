@@ -7,21 +7,21 @@ use Livewire\Component;
 class Sprint extends Component
 {
     public $sprint;
-    public $show_input_ticket = false;
-    public $new_ticket = '';
+    public $show_input_issue = false;
+    public $new_issue = '';
 
-    public function showInputTicket()
+    public function showInputIssue()
     {
-        $this->show_input_ticket = true;
+        $this->show_input_issue = true;
     }
 
-    public function hideInputTicket()
+    public function hideInputIssue()
     {
-        $this->show_input_ticket = false;
+        $this->show_input_issue = false;
     }
 
-    public function createTicket($name) {
-        $this->hideInputTicket();
+    public function createIssue($name) {
+        $this->hideInputIssue();
     }
 
     public function render()

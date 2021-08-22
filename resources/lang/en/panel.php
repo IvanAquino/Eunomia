@@ -27,6 +27,9 @@ return [
         'password' => 'Password',
         'phone_number' => 'Phone number',
     ],
+    'issues' => [
+        'placeholder' => 'What needs to be done?',
+    ],
     'projects' => [
         'ask_delete_project' => 'Are you sure you want to delete the project?',
         'create_project' => 'Create project',
@@ -56,8 +59,5 @@ return [
     'sprints' => [
         'create_sprint' => 'Create sprint',
         'sprint_x_number' => 'Sprint :number',
-    ],
-    'tickets' => [
-        'placeholder' => 'What needs to be done?',
     ],
 ];

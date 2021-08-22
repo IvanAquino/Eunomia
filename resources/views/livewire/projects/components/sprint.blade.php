@@ -3,14 +3,14 @@
         {{ $sprint->name }}
     </div>
 
-    @if ($show_input_ticket)
+    @if ($show_input_issue)
         <x-adminlte-input
-            name="ticket_name"
+            name="issue_name"
             class="form-control-sm"
-            placeholder="{{ __('panel.tickets.placeholder') }}"
-            wire:model="new_ticket"
-            wire:keydown.enter="createTicket($event.target.value)"
-            wire:keydown.escape="hideInputTicket"
+            placeholder="{{ __('panel.issues.placeholder') }}"
+            wire:model="new_issue"
+            wire:keydown.enter="createIssue($event.target.value)"
+            wire:keydown.escape="hideInputIssue"
             autofocus
         />
     @else
@@ -18,7 +18,7 @@
             label="{{ __('panel.sprints.create_sprint') }}"
             class="bg-white btn-sm btn-block text-left"
             icon="fa fa-plus"
-            wire:click="showInputTicket"
+            wire:click="showInputIssue"
         />
     @endif
 </div>
