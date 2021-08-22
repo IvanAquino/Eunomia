@@ -27,7 +27,7 @@ class Sprint extends Component
 
     public function createIssue($name) {
         $code = $this->sprint->project->code;
-        $count = $this->sprint->issues()->count() + 1;
+        $count = $this->sprint->project->issues()->count() + 1;
 
         $this->sprint->issues()->create([
             'code' => "{$code}-{$count}",

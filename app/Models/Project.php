@@ -20,8 +20,14 @@ class Project extends Model
         return $this->belongsTo(Client::class);
     }
 
+    public function issues()
+    {
+        return $this->hasManyThrough(Issue::class, Sprint::class);
+    }
+
     public function sprints()
     {
         return $this->hasMany(Sprint::class);
     }
+
 }
