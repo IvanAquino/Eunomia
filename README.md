@@ -26,6 +26,9 @@ Made with laravel and livewire
   
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+<p>
+<img src="screenshots/1.png?raw=1" width="500" />
+<img src="screenshots/2.png?raw=1" width="500" />
+</p>
 
   
