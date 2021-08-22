@@ -10,6 +10,11 @@ class Sprint extends Component
     public $show_input_issue = false;
     public $new_issue = '';
 
+    public function getIssuesProperty()
+    {
+        return $this->sprint->issues()->get();
+    }
+
     public function showInputIssue()
     {
         $this->show_input_issue = true;
@@ -21,7 +26,16 @@ class Sprint extends Component
     }
 
     public function createIssue($name) {
+        $code = $this->sprint->project->code;
+        $count = $this->sprint->issues()->count() + 1;
+
+        $this->sprint->issues()->create([
+            'code' => "{$code}-{$count}",
+            'name' => $name,
+        ]);
+
         $this->hideInputIssue();
+        $this->reset('new_issue');
     }
 
     public function render()

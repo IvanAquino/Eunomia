@@ -28,6 +28,7 @@ return [
         'phone_number' => 'Phone number',
     ],
     'issues' => [
+        'create_issue' => 'Create issue',
         'placeholder' => 'What needs to be done?',
     ],
     'projects' => [

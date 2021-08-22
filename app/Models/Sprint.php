@@ -24,6 +24,11 @@ class Sprint extends Model
         'is_backlog' => 'boolean',
     ];
 
+    public function issues()
+    {
+        return $this->hasMany(Issue::class);
+    }
+
     public function project()
     {
         return $this->belongsTo(Project::class);

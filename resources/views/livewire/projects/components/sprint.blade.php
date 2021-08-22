@@ -3,6 +3,14 @@
         {{ $sprint->name }}
     </div>
 
+    @foreach ($this->issues as $issue)
+        @livewire(
+            'projects.components.issue-row',
+            ['issue' => $issue],
+            key($issue->id)
+        )
+    @endforeach
+
     @if ($show_input_issue)
         <x-adminlte-input
             name="issue_name"
@@ -15,8 +23,8 @@
         />
     @else
         <x-adminlte-button
-            label="{{ __('panel.sprints.create_sprint') }}"
-            class="bg-white btn-sm btn-block text-left"
+            label="{{ __('panel.issues.create_issue') }}"
+            class="btn-sm btn-block text-left"
             icon="fa fa-plus"
             wire:click="showInputIssue"
         />
