@@ -3,9 +3,27 @@
 $sprint-bg: #ecf0f8;
 $sprint-border: #dbe1f0;
 $border-radius: .25rem;
+$input-hover: #f4f6f9;
 
 body {
     font-family: 'Nunito Sans', sans-serif;
+}
+
+.backlog__container {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 128px);
+
+    .backlog__issues-column {
+        flex: 1;
+        padding-right: 10px;
+        height: 100%;
+        overflow-y: scroll;
+    }
+    .backlog__issues-right-column {
+        height: 100%;
+        overflow-y: scroll;
+    }
 }
 
 .sprint {
@@ -13,4 +31,26 @@ body {
     border: 1px solid $sprint-border;
     border-radius: $border-radius;
     padding: 10px;
+}
+
+.issue__row {
+    cursor: pointer;
+}
+
+.issue__card {
+    width: 430px;
+    min-height: 400px;
+    padding: 10px;
+}
+
+.issue-card__component {
+    .title {
+        cursor: pointer;
+        height: calc(2.25rem + 2px);
+        padding: .375rem .75rem;
+
+        &:hover {
+            background: $input-hover;
+        }
+    }
 }

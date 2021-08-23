@@ -13,7 +13,7 @@
 
     @if ($show_input_issue)
         <x-adminlte-input
-            id="issue_name_{{ $sprint->id }}"
+            id="sprint_issue_name_{{ $sprint->id }}"
             name="issue_name"
             class="form-control-sm"
             placeholder="{{ __('panel.issues.placeholder') }}"
@@ -34,7 +34,7 @@
 @push('js')
 <script>
     window.addEventListener('show_input_issue_{{ $sprint->id }}', function () {
-        document.querySelector('#issue_name_{{ $sprint->id }}').focus();
+        document.querySelector('#sprint_issue_name_{{ $sprint->id }}').focus();
     })
 </script>
 @endpush

@@ -8,8 +8,22 @@ use Livewire\Component;
 class Backlog extends Component
 {
     use SprintFunctions;
+    protected $listeners = [
+        'showIssueCard',
+    ];
 
     public $project;
+    public $issue_id;
+
+    public function showIssueCard($issue_id)
+    {
+        if ($this->issue_id == $issue_id) {
+            $this->issue_id = null;
+            return;
+        }
+        
+        $this->issue_id = $issue_id;
+    }
 
     public function getSprintsProperty()
     {
