@@ -15,11 +15,29 @@ class Issue extends Model
         'description',
         'assigned_to',
         'sprint_id',
+        'reported_by',
     ];
 
     public function assignedTo()
     {
         return $this->belongsTo(User::class, 'assigned_to');
+    }
+
+    public function project()
+    {
+        return $this->hasOneThrough(
+            Project::class, 
+            Sprint::class,
+            'id',
+            'id',
+            'sprint_id',
+            'project_id'
+        );
+    }
+
+    public function reportedBy()
+    {
+        return $this->belongsTo(User::class, 'reported_by');
     }
 
     public function sprint()

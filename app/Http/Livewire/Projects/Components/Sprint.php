@@ -28,12 +28,14 @@ class Sprint extends Component
     }
 
     public function createIssue($name) {
+        $user = auth()->user();
         $code = $this->sprint->project->code;
         $count = $this->sprint->project->issues()->count() + 1;
 
         $this->sprint->issues()->create([
             'code' => "{$code}-{$count}",
             'name' => $name,
+            'reported_by' => $user->id,
         ]);
 
         $this->hideInputIssue();

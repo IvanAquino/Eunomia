@@ -30,6 +30,9 @@ return [
     'issues' => [
         'create_issue' => 'Create issue',
         'placeholder' => 'What needs to be done?',
+        'reporter' => 'Reporter',
+        'reporter_changed' => 'Reporter changed successfully',
+        'sprint_changed' => 'Sprint changed successfully',
     ],
     'projects' => [
         'ask_delete_project' => 'Are you sure you want to delete the project?',
@@ -59,6 +62,7 @@ return [
     ],
     'sprints' => [
         'create_sprint' => 'Create sprint',
+        'sprint' => 'Sprint',
         'sprint_x_number' => 'Sprint :number',
     ],
 ];

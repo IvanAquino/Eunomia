@@ -1,4 +1,4 @@
-<div class="sprint mb-2">
+<div class="sprint mb-4">
     <div class="mb-2">
         {{ $sprint->name }}
     </div>

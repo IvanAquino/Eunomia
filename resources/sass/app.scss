@@ -44,7 +44,8 @@ body {
 }
 
 .issue-card__component {
-    .title {
+    .box-like-input {
+        border-radius: .2rem;
         cursor: pointer;
         height: calc(2.25rem + 2px);
         padding: .375rem .75rem;
