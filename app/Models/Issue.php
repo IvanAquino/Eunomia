@@ -16,6 +16,13 @@ class Issue extends Model
         'assigned_to',
         'sprint_id',
         'reported_by',
+        'estimated_hours',
+        'story_point',
+    ];
+
+    protected $casts = [
+        'estimated_hours' => 'float',
+        'story_point' => 'float',
     ];
 
     public function assignedTo()

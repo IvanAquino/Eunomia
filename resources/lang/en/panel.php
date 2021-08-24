@@ -30,11 +30,14 @@ return [
     'issues' => [
         'assignee' => 'Assignee',
         'create_issue' => 'Create issue',
+        'estimated_hours' => 'Estimated hours',
         'placeholder' => 'What needs to be done?',
         'reporter' => 'Reporter',
         'reporter_changed' => 'Reporter changed successfully',
         'select_assignee' => 'Select one assignee',
         'sprint_changed' => 'Sprint changed successfully',
+        'story_point' => 'Story point estimate',
+        'updated_successfully' => 'Issue updated successfully',
     ],
     'projects' => [
         'ask_delete_project' => 'Are you sure you want to delete the project?',

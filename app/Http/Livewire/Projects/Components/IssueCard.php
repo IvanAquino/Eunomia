@@ -12,9 +12,11 @@ class IssueCard extends Component
 
     public function mount($id)
     {
-        $this->issue       = Issue::find($id);
-        $this->sprint_id   = $this->issue->sprint_id;
-        $this->reported_by = $this->issue->reported_by;
+        $this->issue           = Issue::find($id);
+        $this->estimated_hours = $this->issue->estimated_hours;
+        $this->story_point     = $this->issue->story_point;
+        $this->sprint_id       = $this->issue->sprint_id;
+        $this->reported_by     = $this->issue->reported_by;
         if ($this->issue->assigned_to) {
             $this->assigned_to = $this->issue->assigned_to;
         }
@@ -56,6 +58,7 @@ class IssueCard extends Component
             $this->issue->refresh();
             $this->hideIssueNameInput();
             $this->emit("updated_issue_{$this->issue->id}");
+            $this->alert('success', __('panel.issues.updated_successfully'));
         }
     }
 
@@ -86,6 +89,52 @@ class IssueCard extends Component
         $this->issue->assigned_to = $this->assigned_to ?: null;
         $this->issue->save();
         $this->alert('success', __('panel.issues.reporter_changed'));
+    }
+
+    /*
+     * Estimated hours functions
+     */
+    public $estimated_hours;
+    public $show_estimated_hours = false;
+    public function showEstimatedHoursInput()
+    {
+        $this->show_estimated_hours = true;
+        $this->dispatchBrowserEvent('set_focus_on_estimated_hours');
+    }
+    public function hideEstimatedHoursInput()
+    {
+        $this->estimated_hours = $this->issue->estimated_hours;
+        $this->show_estimated_hours = false;
+    }
+    public function updateEstimatedHours()
+    {
+        $this->issue->estimated_hours = $this->estimated_hours;
+        $this->issue->save();
+        $this->show_estimated_hours = false;
+        $this->alert('success', __('panel.issues.updated_successfully'));
+    }
+
+    /*
+     * Estimated hours functions
+     */
+    public $story_point;
+    public $show_story_point = false;
+    public function showStoryPointsInput()
+    {
+        $this->show_story_point = true;
+        $this->dispatchBrowserEvent('set_focus_on_story_point');
+    }
+    public function hideStoryPointsInput()
+    {
+        $this->story_point = $this->issue->story_point;
+        $this->show_story_point = false;
+    }
+    public function updateStoryPoints()
+    {
+        $this->issue->story_point = $this->story_point;
+        $this->issue->save();
+        $this->show_story_point = false;
+        $this->alert('success', __('panel.issues.updated_successfully'));
     }
 
     public function render()
