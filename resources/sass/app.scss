@@ -54,4 +54,15 @@ body {
             background: $input-hover;
         }
     }
+    .box-like-input-sm {
+        border-radius: .2rem;
+        cursor: pointer;
+        font-size: .875rem;
+        height: calc(1.8125rem + 2px);
+        padding: .25rem .5rem;
+
+        &:hover {
+            background: $input-hover;
+        }
+    }
 }

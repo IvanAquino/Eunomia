@@ -28,10 +28,12 @@ return [
         'phone_number' => 'Phone number',
     ],
     'issues' => [
+        'assignee' => 'Assignee',
         'create_issue' => 'Create issue',
         'placeholder' => 'What needs to be done?',
         'reporter' => 'Reporter',
         'reporter_changed' => 'Reporter changed successfully',
+        'select_assignee' => 'Select one assignee',
         'sprint_changed' => 'Sprint changed successfully',
     ],
     'projects' => [

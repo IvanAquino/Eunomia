@@ -15,6 +15,9 @@ class IssueCard extends Component
         $this->issue       = Issue::find($id);
         $this->sprint_id   = $this->issue->sprint_id;
         $this->reported_by = $this->issue->reported_by;
+        if ($this->issue->assigned_to) {
+            $this->assigned_to = $this->issue->assigned_to;
+        }
     }
 
     /*
@@ -74,6 +77,13 @@ class IssueCard extends Component
     public function changeReportedBy()
     {
         $this->issue->reported_by = $this->reported_by;
+        $this->issue->save();
+        $this->alert('success', __('panel.issues.reporter_changed'));
+    }
+    public $assigned_to;
+    public function changeAssignee()
+    {
+        $this->issue->assigned_to = $this->assigned_to ?: null;
         $this->issue->save();
         $this->alert('success', __('panel.issues.reporter_changed'));
     }

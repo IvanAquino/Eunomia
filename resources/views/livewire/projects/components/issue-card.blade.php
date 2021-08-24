@@ -25,11 +25,11 @@
 
     {{-- Sprint --}}
     <div class="form-group row">
-        <label for="reporter" class="col-3 col-form-label">
+        <label for="sprint-selector" class="col-3 col-form-label col-form-label-sm">
             {{ __('panel.sprints.sprint') }}
         </label>
         <div class="col-9">
-            <select id="sprint-selector" class="form-control" wire:model="sprint_id" wire:change="changeSprint">
+            <select id="sprint-selector" class="form-control form-control-sm" wire:model="sprint_id" wire:change="changeSprint">
                 @foreach ($this->sprints as $sprint)
                     <option value="{{ $sprint->id }}">{{ $sprint->name }}</option>
                 @endforeach
@@ -39,11 +39,26 @@
     
     {{-- Reporter --}}
     <div class="form-group row">
-        <label for="reporter" class="col-3 col-form-label">
+        <label for="reporter" class="col-3 col-form-label col-form-label-sm">
             {{ __('panel.issues.reporter') }}
         </label>
         <div class="col-9">
-            <select id="sprint-selector" class="form-control" wire:model="reported_by" wire:change="changeReportedBy">
+            <select id="reporter" class="form-control form-control-sm" wire:model="reported_by" wire:change="changeReportedBy">
+                @foreach ($this->users as $user)
+                    <option value="{{ $user->id }}">{{ $user->name }}</option>
+                @endforeach
+            </select>
+        </div>
+    </div>
+
+    {{-- Assignee --}}
+    <div class="form-group row">
+        <label for="assignee" class="col-3 col-form-label col-form-label-sm">
+            {{ __('panel.issues.assignee') }}
+        </label>
+        <div class="col-9">
+            <select id="assigned_to" class="form-control form-control-sm" wire:model="assigned_to" wire:change="changeAssignee">
+                <option value="">-- {{ __('panel.issues.select_assignee') }} --</option>
                 @foreach ($this->users as $user)
                     <option value="{{ $user->id }}">{{ $user->name }}</option>
                 @endforeach
