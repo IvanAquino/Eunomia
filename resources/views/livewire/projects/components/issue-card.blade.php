@@ -125,5 +125,9 @@
     window.addEventListener('set_focus_on_estimated_hours', function () {
         document.querySelector('#estimated_hours').focus();
         document.querySelector('#estimated_hours').select();
-    })
+    });
+    window.addEventListener('set_focus_on_story_point', function () {
+        document.querySelector('#story_point').focus();
+        document.querySelector('#story_point').select();
+    });
 </script>
