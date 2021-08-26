@@ -8,6 +8,9 @@ use Livewire\Component;
 
 class IssueCard extends Component
 {
+    protected $listeners = [
+        'saveDescription',
+    ];
     public $issue;
 
     public function mount($id)
@@ -20,6 +23,8 @@ class IssueCard extends Component
         if ($this->issue->assigned_to) {
             $this->assigned_to = $this->issue->assigned_to;
         }
+        $this->dispatchBrowserEvent('show_summernote');
+        $this->emit('show_summernote');
     }
 
     /*
@@ -135,6 +140,15 @@ class IssueCard extends Component
         $this->issue->save();
         $this->show_story_point = false;
         $this->alert('success', __('panel.issues.updated_successfully'));
+    }
+
+    /*
+     * Description functions
+     */
+    public function saveDescription($description) {
+        $this->issue->description = $description;
+        $this->issue->save();
+        $this->alert('success', __('panel.issues.description_issue_saved'));
     }
 
     public function render()

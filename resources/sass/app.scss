@@ -67,4 +67,14 @@ body {
             background: $input-hover;
         }
     }
+    .box-like-textarea {
+        border: 1px solid transparent;
+        border-radius: .2rem;
+        cursor: pointer;
+        padding: .375rem .75rem;
+
+        &:hover {
+            background: $input-hover;
+        }
+    }
 }

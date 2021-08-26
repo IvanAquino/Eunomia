@@ -21,7 +21,6 @@ class Backlog extends Component
             $this->issue_id = null;
             return;
         }
-        
         $this->issue_id = $issue_id;
     }
 

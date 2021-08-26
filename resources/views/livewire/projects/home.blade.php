@@ -20,7 +20,7 @@
                         <x-secondary-button-link
                             route="projects.details"
                             :routeParams="['project' => $project->id]"
-                            label="panel.general.details"
+                            label="panel.general.backlog"
                         />
 
                         <x-secondary-button-link

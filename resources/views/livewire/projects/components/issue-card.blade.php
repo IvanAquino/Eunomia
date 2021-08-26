@@ -19,7 +19,47 @@
         </div>
     @endif
 
-    <div class="mt-4 font-weight-bold text-center mb-4">
+    <div class="border-bottom">
+        <label for="description">{{ __('panel.general.description') }}</label>
+    </div>
+
+    <div
+        class="form-group"
+        wire:ignore
+        x-init="init()"
+        x-data="{
+            el: null,
+            init() {
+                this.el = $('#description_editor');
+                this.el.summernote({
+                    height: 250,
+                    toolbar: [
+                        ['style', ['bold', 'italic', 'underline']],
+                        ['font', ['strikethrough', 'superscript', 'subscript']],
+                        ['color', ['color']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                    ]
+                });
+                this.el.summernote('code', '{{ $issue->description }}');
+            },
+            saveDescription() {
+                Livewire.emit('saveDescription',this.el.summernote('code'))
+            }
+        }"
+    >
+        <div id="description_editor">
+        </div>
+        <div class="text-right mt-2">
+            <x-adminlte-button
+                class="btn-sm bg-purple"
+                label="{{ __('panel.general.save') }}"
+                id="description_save"
+                @click="saveDescription"
+            />
+        </div>
+    </div>
+
+    <div class="mt-4 font-weight-bold text-center mb-4 border-bottom">
         {{ __('panel.general.details') }}
     </div>
 
