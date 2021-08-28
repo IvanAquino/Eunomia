@@ -18,6 +18,7 @@ return [
         'backlog' => 'Backlog',
         'board' => 'Board',
         'cancel' => 'Cancel',
+        'close' => 'Close',
         'code' => 'Code',
         'create_one' => 'Create one',
         'description' => 'Description',
@@ -32,6 +33,8 @@ return [
         'password' => 'Password',
         'phone_number' => 'Phone number',
         'save' => 'Save',
+        'start_date' => 'Start date',
+        'end_date' => 'End date',
     ],
     'issues' => [
         'add_description' => 'Add description to issue',
@@ -76,8 +79,11 @@ return [
     'sprints' => [
         'ask_delete_sprint' => 'Are you sure you want to delete the sprint?',
         'create_sprint' => 'Create sprint',
+        'edit_sprint' => 'Edit sprint',
         'sprint' => 'Sprint',
         'sprint_deleted_success' => 'Sprint deleted successfully',
+        'sprint_goal' => 'Sprint goal',
+        'sprint_saved_success' => 'Sprint saved successfully',
         'sprint_x_number' => 'Sprint :number',
         'start_sprint' => 'Start sprint',
     ],

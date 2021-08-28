@@ -13,14 +13,22 @@ class Backlog extends Component
     protected $listeners = [
         'showIssueCard',
         'refreshBacklog',
+        'showEditSprintModal',
     ];
 
     public $project;
     public $issue_id;
+    public $sprint_edit_id;
 
     public function refreshBacklog()
     {
         $this->resetPage();
+    }
+
+    public function showEditSprintModal($id)
+    {
+        $this->sprint_edit_id = $id;
+        $this->dispatchBrowserEvent('show_edit_sprint_modal');
     }
 
     public function showIssueCard($issue_id)

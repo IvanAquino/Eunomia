@@ -13,14 +13,18 @@
             @endif
         </div>
         <div>
+            @if (!$sprint->is_backlog)
             <div class="dropdown">
                 <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">{{ __('panel.general.edit') }}</a>
+                    <a class="dropdown-item" href="#" wire:click="$emit('showEditSprintModal', {{ $sprint->id }})">
+                        {{ __('panel.general.edit') }}
+                    </a>
                     <a class="dropdown-item" href="#" wire:click.prevent="confirmDeleteSprint">{{ __('panel.general.delete') }}</a>
                 </div>
             </div>
+            @endif
         </div>
     </div>
 
