@@ -16,11 +16,14 @@ return [
     ],
     'general' => [
         'backlog' => 'Backlog',
+        'board' => 'Board',
         'cancel' => 'Cancel',
         'code' => 'Code',
         'create_one' => 'Create one',
         'description' => 'Description',
+        'delete' => 'Delete',
         'details' => 'Details',
+        'edit' => 'Edit',
         'email' => 'Email',
         'home' => 'Home',
         'id' => 'ID',
@@ -71,8 +74,11 @@ return [
         'select_role' => 'Select a role',
     ],
     'sprints' => [
+        'ask_delete_sprint' => 'Are you sure you want to delete the sprint?',
         'create_sprint' => 'Create sprint',
         'sprint' => 'Sprint',
+        'sprint_deleted_success' => 'Sprint deleted successfully',
         'sprint_x_number' => 'Sprint :number',
+        'start_sprint' => 'Start sprint',
     ],
 ];

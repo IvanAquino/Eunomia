@@ -1,6 +1,27 @@
 <div class="sprint mb-4">
-    <div class="mb-2">
-        {{ $sprint->name }}
+    <div class="mb-2 title-row">
+        <div class="title">
+            {{ $sprint->name }}
+        </div>
+        <div>
+            @if (!$sprint->is_backlog)
+                <x-adminlte-button
+                    class="btn-sm bg-purple"
+                    label="{{ __('panel.sprints.start_sprint') }}"
+                    :disabled="!$can_start_sprint"
+                />
+            @endif
+        </div>
+        <div>
+            <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">{{ __('panel.general.edit') }}</a>
+                    <a class="dropdown-item" href="#" wire:click.prevent="confirmDeleteSprint">{{ __('panel.general.delete') }}</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     @foreach ($this->issues as $issue)

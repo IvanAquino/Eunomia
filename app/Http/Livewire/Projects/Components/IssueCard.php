@@ -76,6 +76,7 @@ class IssueCard extends Component
         $this->issue->sprint_id = $this->sprint_id;
         $this->issue->save();
         $this->alert('success', __('panel.issues.sprint_changed'));
+        $this->emit('refreshSprint');
     }
 
     /*

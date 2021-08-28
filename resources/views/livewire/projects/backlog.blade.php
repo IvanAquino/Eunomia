@@ -6,7 +6,7 @@
         @foreach ($this->sprints as $sprint)
             @livewire(
                 'projects.components.sprint',
-                ['sprint' => $sprint],
+                ['sprint' => $sprint, 'can_start_sprint' => $loop->first],
                 key($sprint->id)
             )
         @endforeach
@@ -16,7 +16,7 @@
         <div class="mt-4 mb-2 text-right">
             <x-adminlte-button
                 label="{{ __('panel.sprints.create_sprint') }}"
-                class="bg-purple btn-sm"
+                class="bg-secondary btn-sm"
                 wire:click="createSprint"
             />
         </div>
